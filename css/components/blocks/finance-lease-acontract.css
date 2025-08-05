@@ -1,0 +1,119 @@
+.finance-lease-contracts__container {
+  background-color: var(--color-gray-bg);
+}
+
+.finance-lease-contracts__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 96px 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.finance-lease-contracts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.finance-lease-acontract-item__container {
+  background-color: var(--color-white);
+  border-radius: 16px;
+}
+
+.inance-lease-contract-item__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.inance-lease-agreement-item__main {
+  padding: 0px 24px 24px 24px;
+}
+
+.inance-lease-contract-item__info {
+  display: flex;
+  gap: 24px;
+}
+
+.inance-lease-contract-item__contract-number {
+  display: flex;
+  align-items: center;
+}
+
+.inance-lease-contract-item__status-name {
+  color: var(--color-primary);
+}
+
+.inance-lease-contract-item__date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.inance-lease-contract-item__calendar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.inance-lease-contract-item__date {
+  color: var(--color-gray);
+}
+
+.inance-lease-contract-item__round-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+}
+
+.inance-lease-contract-item__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inance-lease-contract-item__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.leasing-table {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(164px, 1fr)); /* 6 колонок */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: Inter, sans-serif;
+  line-height: 130%; /* 15.6px */
+}
+
+.cell {
+  font-size: 14px;
+  display: flex; /* превращаем ячейку в flex-контейнер */
+  align-items: center; /* по вертикали */
+  padding: 16px;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.cell.header {
+  font-size: 14px;
+  display: flex; /* превращаем ячейку в flex-контейнер */
+  align-items: center; /* по вертикали */
+  background: #fafafa;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.cell:nth-child(6n) {
+  border-right: none; /* убираем правую границу у последнего столбца */
+}
+
+.cell:nth-last-child(-n + 6) {
+  border-bottom: none; /* убираем нижнюю границу у последней строки */
+}
