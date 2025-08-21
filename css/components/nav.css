@@ -1,0 +1,16 @@
+.nav-item {
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: var(--color-primary900);
+}
+
+.nav-item.active {
+  background-color: var(--color-primary50);
+  color: var(--color-primary900);
+}

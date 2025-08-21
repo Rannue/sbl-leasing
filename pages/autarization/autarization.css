@@ -58,7 +58,7 @@
   text-align: center;
 }
 
-.autarization__link {
+.autarization__information-link {
   color: var(--color-primary);
   font-weight: 300;
   font-size: 14px;
@@ -72,4 +72,21 @@
 
 .autarization-btn {
   width: 100%;
+}
+
+.autarization__separator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-gray400);
+}
+.autarization__technical-support {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.autarization__technical-support .svg-icon {
+  width: 20px;
+  height: 20px;
 }

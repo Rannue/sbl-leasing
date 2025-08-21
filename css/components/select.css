@@ -1,18 +1,22 @@
-.input {
+.select {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
   border-radius: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../../assets/icons/Arrows.svg") no-repeat right 10px center;
   border: 1px var(--color-gray300) solid;
-  width: 100%;
+  cursor: pointer;
 }
 
-.input:hover {
+.select:hover {
   border: 1px var(--color-gray400) solid;
 }
 
-.input:focus {
+.select:focus {
   border: 1px var(--color-black) solid;
   outline: none;
 }
@@ -22,18 +26,8 @@
   font-size: 14px;
 }
 
-label {
-  color: var(--color-gray);
-  font-size: 14px;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.input--small {
+.select--small {
   height: 36px;
   padding: 0px 14px;
   font-size: 14px;
-  width: 100%;
 }

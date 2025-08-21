@@ -10,6 +10,11 @@ h2 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: 20px;
+  line-height: 120%;
+}
+
 h6 {
   font-size: 16px;
   line-height: 130%;
@@ -39,6 +44,10 @@ p {
 
 .text--semibold {
   font-weight: 600;
+}
+
+.text--gray {
+  color: var(--color-gray);
 }
 
 .modal-title {

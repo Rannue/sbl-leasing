@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Название страницы</title>
+    <meta name="description" content="Описание страницы для SEO" />
+    <link rel="stylesheet" href="../../../style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main__container">
+        <div class="personal-profile">
+          <div class="personal-profile__container">
+            <div class="personal-profile__wrapper">
+              <nav>
+                <ul class="personal-profile__nav nav">
+                  <li
+                    data-type="personal"
+                    class="text text--medium personal-profile__nav-item nav-item active"
+                  >
+                    Личные данные
+                  </li>
+                  <li
+                    data-type="contacts"
+                    class="text text--medium personal-profile__nav-item nav-item"
+                  >
+                    Контактная информация
+                  </li>
+                  <li
+                    data-type="settings"
+                    class="text text--medium personal-profile__nav-item nav-item"
+                  >
+                    Настройки
+                  </li>
+                </ul>
+              </nav>
+              <div class="personal-profile__divider"></div>
+              <div id="personal-content" class="personal-profile__content">
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">ФИО</h6>
+                  <h6 class="text--gray">Иванов Иван Иванович</h6>
+                </div>
+                <div class="personal-profile__content-divider"></div>
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">Серия и номер паспорта</h6>
+                  <h6 class="text--gray">HB00000000</h6>
+                </div>
+                <div class="personal-profile__content-divider"></div>
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">
+                    Идентификационный номер паспорта
+                  </h6>
+                  <h6 class="text--gray">000000000000000000000</h6>
+                </div>
+                <div class="personal-profile__content-divider"></div>
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">Кем выдан паспорт</h6>
+                  <h6 class="text--gray">Советский РОВД г.Гомеля</h6>
+                </div>
+                <div class="personal-profile__content-divider"></div>
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">Адрес регистрации</h6>
+                  <h6 class="text--gray">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </h6>
+                </div>
+              </div>
+              <div
+                id="contacts-content"
+                class="personal-profile__content"
+                style="display: none"
+              >
+                <div class="personal-profile__info-block">
+                  <h6 class="text--semibold">Мобильный телефон</h6>
+                  <h6 class="text--gray">+375 00 000 00 00</h6>
+                </div>
+                <div class="personal-profile__content-divider"></div>
+                <div class="personal-profile__info-block">
+                  <!-- view-mode -->
+                  <div class="personal-profile__email-container view-mode">
+                    <div class="personal-profile__email-wrapper">
+                      <h6 class="text--semibold">Электронная почта</h6>
+                      <h6 id="email-text" class="text--gray">
+                        example@gmail.com
+                      </h6>
+                    </div>
+                    <button
+                      id="personal-profile__edit-btn"
+                      class="btn btn--secondary btn--small"
+                    >
+                      Редактировать
+                    </button>
+                  </div>
+                  <!-- edit-mode -->
+                  <div
+                    style="display: none"
+                    class="personal-profile__email-container edit-mode"
+                  >
+                    <div class="personal-profile__email-wrapper">
+                      <h6 class="text--semibold">Электронная почта</h6>
+                      <input
+                        id="email-input"
+                        class="input input--small"
+                        type="text"
+                      />
+                    </div>
+                    <div class="personal-profile__button-comtainer">
+                      <button
+                        id="personal-profile__cancel-btn"
+                        class="btn btn--secondary btn--small"
+                      >
+                        Отмена
+                      </button>
+                      <button
+                        id="personal-profile__save-btn"
+                        class="btn btn--primary btn--small"
+                      >
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="../personal_account/personal-account.js"></script>
+  </body>
+</html>

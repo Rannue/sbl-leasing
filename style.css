@@ -5,22 +5,34 @@
 
 @import url("./css/components/buttons.css");
 @import url("./css/components/input.css");
-@import url("./css/components/modal.css");
+@import url("./css/components/textarea.css");
+@import url("./css/components/modals/modal.css");
 @import url("./css/components/pagination.css");
+@import url("./css/overlay.css");
+@import url("./css/components/nav.css");
 
 @import url("./css/components/blocks/header.css");
 @import url("./css/components/blocks/footer.css");
+@import url("./css/components/select.css");
 @import url("./css/components/blocks/payments.css");
 @import url("./css/components/blocks/payments.css");
 @import url("./css/components/blocks/finance-lease-acontract.css");
 
 @import url("./pages/autarization/autarization.css");
+@import url("./pages/personal_account/personal-account.css");
 
 body {
   font-family: Inter;
-  background-color: var(--color-white);
-  padding: 0;
-  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+
+  background-color: var(--color-gray-bg);
+  color: var(--color-black);
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 hr {
@@ -30,4 +42,28 @@ hr {
   vertical-align: middle;
   margin: 0;
   padding: 0;
+}
+
+a {
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.svg-icon {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.svg-icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.main__container {
+  max-width: 1264px;
+  padding: 72px 32px;
+  margin: 0 auto;
 }

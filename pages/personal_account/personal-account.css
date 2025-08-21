@@ -1,0 +1,46 @@
+.personal-profile__container {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.personal-profile__wrapper {
+  display: flex;
+  gap: 32px;
+}
+
+.personal-profile__divider {
+  width: 1px;
+  background-color: var(--color-gray200);
+}
+
+.personal-profile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.personal-profile__info-block,
+.personal-profile__email-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.personal-profile__content-divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-gray200);
+}
+
+.personal-profile__email-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.personal-profile__button-comtainer {
+  display: flex;
+  gap: 8px;
+}
