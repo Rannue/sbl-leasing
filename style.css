@@ -10,9 +10,11 @@
 @import url("./css/components/pagination.css");
 @import url("./css/overlay.css");
 @import url("./css/components/nav.css");
+@import url("./css/components/toggle.css");
 
-@import url("./css/components/blocks/header.css");
-@import url("./css/components/blocks/footer.css");
+@import url("./components/header/header.css");
+@import url("./components/footer/footer.css");
+
 @import url("./css/components/select.css");
 @import url("./css/components/blocks/payments.css");
 @import url("./css/components/blocks/payments.css");
@@ -20,12 +22,14 @@
 
 @import url("./pages/autarization/autarization.css");
 @import url("./pages/personal_account/personal-account.css");
+@import url("./pages/404/404.css");
 
 body {
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 140%;
+  height: 100%;
 
   background-color: var(--color-gray-bg);
   color: var(--color-black);
@@ -62,8 +66,31 @@ a:hover {
   opacity: 0.7;
 }
 
+main {
+  background-color: var(--color-gray-bg);
+}
+
 .main__container {
-  max-width: 1264px;
-  padding: 72px 32px;
+  max-width: 1464px;
   margin: 0 auto;
+  height: 100vh;
+}
+
+.main__container-wrapper {
+  padding: 72px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* icons */
+
+.icon--meduim {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--large {
+  width: 32px;
+  height: 32px;
 }

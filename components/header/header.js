@@ -11,6 +11,18 @@ if (userNameElement && firstLetterElement) {
 
 //
 
+const burgerBTN = document.getElementById("burger-btn");
+const closeBTN = document.getElementById("header__close-btn");
+const menu = document.getElementById("menu");
+
+burgerBTN.addEventListener("click", () => {
+  menu.style.display = "flex";
+});
+
+closeBTN.addEventListener("click", () => {
+  menu.style.display = "none";
+});
+
 // function setElementHeight() {
 //   const headerBottom = document.querySelector(".header__bottom");
 //   const headerTop = document.querySelector(".header__top");

@@ -7,6 +7,7 @@
 .personal-profile__wrapper {
   display: flex;
   gap: 32px;
+  flex-grow: 1;
 }
 
 .personal-profile__divider {
@@ -43,4 +44,26 @@
 .personal-profile__button-comtainer {
   display: flex;
   gap: 8px;
+}
+
+#settings-content .personal-profile__info-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 1099px) {
+  .personal-profile__nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .personal-profile__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 689px) {
+  .personal-profile__container {
+    overflow: hidden;
+  }
 }

@@ -5,6 +5,7 @@ const tabs = document.querySelectorAll(".personal-profile__nav-item");
 
 const personal = document.getElementById("personal-content");
 const contacts = document.getElementById("contacts-content");
+const settings = document.getElementById("settings-content");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -18,18 +19,19 @@ tabs.forEach((tab) => {
       case "personal":
         personal.style.display = "flex";
         contacts.style.display = "none";
+        settings.style.display = "none";
         break;
 
       case "contacts":
         personal.style.display = "none";
         contacts.style.display = "flex";
+        settings.style.display = "none";
         break;
 
       case "settings":
-        content.innerHTML = `
-            <h2>Настройки</h2>
-            <p>Раздел для изменения пароля, темы и других параметров.</p>
-          `;
+        personal.style.display = "none";
+        contacts.style.display = "none";
+        settings.style.display = "flex";
         break;
     }
   });

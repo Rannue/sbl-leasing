@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="../../style.css" />
 
-<div class="header__container">
+<div style="display: flex" id="menu" class="header__container">
   <div class="header__top">
     <div class="header__logo-container">
       <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" />
       <img
-        class="header__close-btn"
-        src="../../assets/icons/Non-categorized.svg"
+        id="header__close-btn"
+        class="header__close-btn icon--large"
+        src="../../assets/icons/Close.svg"
         alt=""
       />
     </div>
@@ -36,21 +37,50 @@
     </div>
   </div>
   <div class="header__bottom">
-    <nav>
+    <nav class="header__nav-container">
       <ul class="header__nav">
-        <li class="text text--medium header__nav-item active">Договоры</li>
-        <li class="text text--medium header__nav-item">Онлайн - заявки</li>
-        <li class="text text--medium header__nav-item">Вопрос - Ответ</li>
-        <li class="text text--medium header__nav-item">Уведомления</li>
+        <li class="nav-item text text--medium header__nav-item active">
+          Договоры
+        </li>
+        <li class="nav-item text text--medium header__nav-item">
+          Онлайн - заявки
+        </li>
+        <li class="nav-item text text--medium header__nav-item">
+          Вопрос - Ответ
+        </li>
+        <li class="nav-item text text--medium header__nav-item">Уведомления</li>
       </ul>
     </nav>
-    <div class="header__personal-profil">
+    <div class="header__personal-profile">
       <div class="header__user-avatar">
         <h4 id="header__user-first-letter"></h4>
       </div>
-      <p id="user-name" class="header__user-name">Сергеев Сергей</p>
+      <div class="header__link-container">
+        <p id="user-name" class="header__user-name text--semibold">
+          Сергеев Сергей
+        </p>
+        <li class="header__profile-link">
+          <p style="color: var(--color-primary)">Перейти в профиль</p>
+          <img
+            class="header__profile-arrow"
+            src="../../assets/icons/Arrow-right.svg"
+          />
+        </li>
+      </div>
     </div>
   </div>
 </div>
+<div class="header__mobile-container">
+  <div class="header__logo-container">
+    <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" />
+  </div>
+  <div id="burger-btn" class="header__burger-menu">
+    <img
+      class="header__logo icon--large"
+      src="../../assets/icons/Burger.svg"
+      alt=""
+    />
+  </div>
+</div>
 
-<script src="../ header/header.js"></script>
+<script src="./header.js"></script>
