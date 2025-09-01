@@ -35,7 +35,7 @@ openTechnicalSupportFormButton.addEventListener("click", (e) => {
       </svg>
     </div>
     <div class="modal__main">
-      <label class="technical-support__label" for="name">
+      <label class="modal__label" for="name">
         ФИО*
         <input
           class="input input--small"
@@ -46,7 +46,7 @@ openTechnicalSupportFormButton.addEventListener("click", (e) => {
         />
       </label>
 
-      <label class="technical-support__label" for="feedback-format">
+      <label class="modal__label" for="feedback-format">
         Формат обратной связи*
         <select class="select select--small" name="feedback-format" required>
           <option value="designer">item1</option>
@@ -55,7 +55,7 @@ openTechnicalSupportFormButton.addEventListener("click", (e) => {
         </select>
       </label>
 
-      <label for="message">
+      <label class="modal__label" for="message">
         Сообщение о проблеме
         <textarea
           rows="8"

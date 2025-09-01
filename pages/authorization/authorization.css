@@ -1,11 +1,11 @@
-.autarization__container {
+.authorization {
   display: flex;
   gap: 32px;
   padding: 32px;
   background-color: white;
 }
 
-.autarization__wrapper {
+.authorization__wrapper {
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 
-.autarization__autarization-info {
+.authorization__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,73 +21,73 @@
   width: 100%;
 }
 
-.autarization__fields {
+.authorization__fields {
   display: block;
   width: calc(100% - 140px);
 }
 
-.autarization__title {
+.authorization__title {
   display: flex;
   gap: 16px;
 }
 
-.autarization__img {
+.authorization__image {
   width: 100%;
   object-fit: cover;
   height: calc(100vh - 64px);
   border-radius: 24px;
 }
 
-.autarization__logo {
+.authorization__logo {
   height: 42px;
   width: auto;
 }
 
-.autarization__registration-info {
+.authorization__registration-text {
   color: var(--color-gray);
   font-weight: 300;
 }
 
-.autarization__registration {
+.authorization__registration {
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
 }
 
-.autarization__registration-info {
+.authorization__registration-text {
   text-align: center;
 }
 
-.autarization__information-link {
+.authorization__link {
   color: var(--color-primary);
   font-weight: 300;
   font-size: 14px;
 }
 
-.autarization__fields {
+.authorization__fields {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.autarization-btn {
+.authorization__btn {
   width: 100%;
 }
 
-.autarization__separator {
+.authorization__separator {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--color-gray400);
 }
-.autarization__technical-support {
+.authorization__technical-support {
   display: flex;
   gap: 4px;
   align-items: center;
 }
 
-.autarization__technical-support .svg-icon {
+.authorization__technical-support .svg-icon {
   width: 20px;
   height: 20px;
 }

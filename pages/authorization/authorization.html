@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body id="body">
-    <div class="autarization__container">
-      <div class="autarization__wrapper">
+    <div class="authorization">
+      <div class="authorization__wrapper">
         <a href="">
           <div
             id="technical-support__form-btn"
-            class="autarization__technical-support"
+            class="authorization__technical-support"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,17 +32,17 @@
             <p>Техническая поддержка</p>
           </div></a
         >
-        <div class="autarization__autarization-info">
-          <div class="autarization__title">
+        <div class="authorization__content">
+          <div class="authorization__title">
             <img
-              class="autarization__logo"
+              class="authorization__logo"
               src="../../assets/icons/_105553126334080.svg"
               alt=""
             />
-            <h1 class="autarization__title-text">Авторизация</h1>
+            <h1 class="authorization__title-text">Авторизация</h1>
           </div>
-          <div class="autarization__fields">
-            <label class="autarization__input">
+          <div class="authorization__fields">
+            <label class="authorization__input">
               Введите номер телефона
               <input
                 placeholder="+375 00 000 00 00"
@@ -51,11 +51,11 @@
               />
             </label>
             <a href="../../index.html">
-              <button class="autarization-btn btn btn--primary btn--small">
+              <button class="authorization__btn btn btn--primary btn--small">
                 Получить код
               </button>
             </a>
-            <div class="autarization__separator">
+            <div class="authorization__separator">
               <hr />
               или
               <hr />
@@ -65,7 +65,7 @@
             </button>
             <button class="btn btn--secondary btn--small">
               <img
-                class="autarization__msi-logo"
+                class="authorization__msi-logo"
                 src="../../assets/icons/Clip path group.svg"
                 alt=""
               />
@@ -73,33 +73,35 @@
             </button>
           </div>
         </div>
-        <div class="autarization__registration">
-          <p class="autarization__registration-info">
+        <div class="authorization__registration">
+          <p class="authorization__registration-text">
             <b style="font-weight: 600; color: var(--color-black)"
               >У вас нет аккаунта?</b
             >
             Регистрация в системе осуществляется через МСИ (Межведомственную
             Cистему Идентификации). Для ознакомления с системой перейдите
             <a
-              class="link autarization__information-link"
+              class="link authorization__link"
               href="https://raschet.by/chastnym-litsam/msi/"
               target="_blank"
               >по ссылке</a
             >.
           </p>
-          <div class="autarization__registration-link">
-            <a class="link autarization__link" href="https://example.com"
+          <div class="authorization__registration-link">
+            <a
+              class="link authorization__link authorization__link--register"
+              href="https://example.com"
               >Зарегистрироваться через МСИ</a
             >
           </div>
         </div>
       </div>
       <img
-        class="autarization__img"
+        class="authorization__image"
         src="../../assets/img/background.png"
         alt=""
       />
     </div>
-    <script src="../autarization/autarization.js"></script>
+    <script src="authorization.js"></script>
   </body>
 </html>
