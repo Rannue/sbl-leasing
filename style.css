@@ -18,10 +18,9 @@
 
 @import url("./css/components/select.css");
 @import url("./css/components/blocks/payments.css");
-@import url("./css/components/blocks/payments.css");
-@import url("./css/components/blocks/finance-lease-acontract.css");
+@import url("./css/components/blocks/finance-lease-contract.css");
 
-@import url("./pages/autarization/authorization.css");
+@import url("./pages/authorization/authorization.css");
 @import url("./pages/personal_account/personal-account.css");
 @import url("./pages/faq/faq.css");
 @import url("./pages/404/404.css");
@@ -86,7 +85,7 @@ main {
 
 /* icons */
 
-.icon--meduim {
+.icon--medium {
   width: 24px;
   height: 24px;
 }

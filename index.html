@@ -3,112 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Мой сайт</title>
+    <title>СБЛ Лизинг - Личный кабинет</title>
+    <meta
+      name="description"
+      content="Личный кабинет СБЛ Лизинг - управление договорами финансовой аренды, платежи и документы"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div id="menu" class="header__container">
-        <div class="header__top">
-          <div class="header__logo-container">
-            <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" />
-            <img
-              id="header__close-btn"
-              class="header__close-btn icon--large"
-              src="../../assets/icons/Close.svg"
-              alt=""
-            />
-          </div>
-          <div class="header__manager-container">
-            <div class="header__manager-info">
-              <img
-                class="header__manager-photo"
-                src="../../assets/img/_Professional portrait of a manager in a modern office setting. Person aged 25–40, wearing a light-colored shirt or classic blazer, friendly and confident expression with a slight smile. Neutral light background (white or light gray). Minimalisti.png"
-                alt=""
-              />
-              <div class="header__manager-name-and-position">
-                <p class="text text--semibold header__manager-name">
-                  Иванов Иван Иванович
-                </p>
-                <p class="text header__manager-position">
-                  Специалист по сопровождению
-                </p>
-              </div>
-            </div>
-            <div class="header__divider"></div>
-            <div class="header__manager-contacts">
-              <p class="text header__manager-phone">+375 (29) 333 33 33</p>
-              <p class="text header__manager-email">example@gmail.com</p>
-            </div>
-            <div class="header__divider"></div>
-            <button class="btn btn--primary btn--small">Заказать звонок</button>
-          </div>
-        </div>
-        <div class="header__bottom">
-          <nav class="header__nav-container">
-            <ul class="header__nav">
-              <a href="../../index.html">
-                <li class="nav-item text text--medium header__nav-item active">
-                  Договоры
-                </li></a
-              >
-              <li class="nav-item text text--medium header__nav-item">
-                Онлайн - заявки
-              </li>
-              <a href="./pages/faq/faq.html">
-                <li class="nav-item text text--medium header__nav-item">
-                  Вопрос - Ответ
-                </li></a
-              >
-              <li class="nav-item text text--medium header__nav-item">
-                Уведомления
-              </li>
-            </ul>
-          </nav>
-          <div class="header__personal-profile">
-            <div class="header__user-avatar">
-              <h4 id="header__user-first-letter"></h4>
-            </div>
-            <div class="header__link-container">
-              <p id="user-name" class="header__user-name text--semibold">
-                Сергеев Сергей
-              </p>
-              <li class="header__profile-link">
-                <a href="./pages/personal_account/personal-account.html">
-                  <p style="color: var(--color-primary)">
-                    Перейти в профиль
-                  </p></a
-                >
+    <!-- Header включается из компонента -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("./components/header/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML =
+            "<header>" + data + "</header>";
 
-                <img
-                  class="header__profile-arrow"
-                  src="../../assets/icons/Arrow-right.svg"
-                />
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header__mobile-container">
-        <div class="header__logo-container">
-          <a href="../../index.html">
-            <img class="header__logo" src="../../assets/img/LOGO.svg" alt=""
-          /></a>
-        </div>
-        <div id="burger-btn" class="header__burger-menu">
-          <img
-            class="header__logo icon--large"
-            src="../../assets/icons/Burger.svg"
-            alt=""
-          />
-        </div>
-      </div>
-    </header>
+          // Инициализируем header после загрузки
+          if (window.initializeHeader) {
+            window.initializeHeader();
+          }
+        });
+    </script>
 
     <main class="main-container">
       <div class="payments__container">
         <div class="payments__wrapper">
           <div class="payments__list">
+            <!-- Payment Item 1 -->
             <div class="payments__payment-item">
               <div class="payment-item__info">
                 <p class="payment-item__text--primary payment-item__number">
@@ -125,7 +48,7 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/Calendar.svg"
-                    alt=""
+                    alt="Календарь"
                   />
                 </div>
                 <div class="payment-item__info">
@@ -142,7 +65,7 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/E-commerce.svg"
-                    alt=""
+                    alt="Сумма платежа"
                   />
                 </div>
                 <div class="payment-item__info">
@@ -161,15 +84,16 @@
               </div>
             </div>
             <hr />
+            <!-- Payment Item 2 -->
             <div class="payments__payment-item">
               <div class="payment-item__info">
                 <p class="payment-item__text--primary payment-item__number">
-                  №123456789
+                  №987654321
                 </p>
                 <p
                   class="payment-item__text--secondary payment-item__contract-date"
                 >
-                  от 19.08.2024
+                  от 15.07.2024
                 </p>
               </div>
               <div class="payment-item__status">
@@ -177,14 +101,14 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/Calendar.svg"
-                    alt=""
+                    alt="Календарь"
                   />
                 </div>
                 <div class="payment-item__info">
                   <p
                     class="payment-item__text--primary payment-item__payment-date"
                   >
-                    07.07.2025
+                    15.08.2025
                   </p>
                   <p class="payment-item__text--secondary">Ближайшая оплата</p>
                 </div>
@@ -194,14 +118,14 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/E-commerce.svg"
-                    alt=""
+                    alt="Сумма платежа"
                   />
                 </div>
                 <div class="payment-item__info">
                   <p
                     class="payment-item__text--primary payment-item__payment-amount"
                   >
-                    12 000 BYN
+                    8 500 BYN
                   </p>
                   <p class="payment-item__text--secondary">
                     Сумма текущего платежа
@@ -213,15 +137,16 @@
               </div>
             </div>
             <hr />
+            <!-- Payment Item 3 -->
             <div class="payments__payment-item">
               <div class="payment-item__info">
                 <p class="payment-item__text--primary payment-item__number">
-                  №123456789
+                  №555666777
                 </p>
                 <p
                   class="payment-item__text--secondary payment-item__contract-date"
                 >
-                  от 19.08.2024
+                  от 01.09.2024
                 </p>
               </div>
               <div class="payment-item__status">
@@ -229,14 +154,14 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/Calendar.svg"
-                    alt=""
+                    alt="Календарь"
                   />
                 </div>
                 <div class="payment-item__info">
                   <p
                     class="payment-item__text--primary payment-item__payment-date"
                   >
-                    07.07.2025
+                    01.10.2025
                   </p>
                   <p class="payment-item__text--secondary">Ближайшая оплата</p>
                 </div>
@@ -246,14 +171,14 @@
                   <img
                     class="payment-item__icon"
                     src="./assets/icons/E-commerce.svg"
-                    alt=""
+                    alt="Сумма платежа"
                   />
                 </div>
                 <div class="payment-item__info">
                   <p
                     class="payment-item__text--primary payment-item__payment-amount"
                   >
-                    12 000 BYN
+                    15 300 BYN
                   </p>
                   <p class="payment-item__text--secondary">
                     Сумма текущего платежа
@@ -282,33 +207,36 @@
             Договоры финансовой аренды (8)
           </h2>
           <div class="finance-lease-contracts__list">
+            <!-- Contract 1 -->
             <div class="finance-lease-contracts__finance-lease-contract-item">
-              <div class="finance-lease-acontract-item__container">
-                <div class="inance-lease-contract-item__header">
-                  <div class="inance-lease-contract-item__info">
+              <div class="finance-lease-contract-item__container">
+                <div class="finance-lease-contract-item__header">
+                  <div class="finance-lease-contract-item__info">
                     <p
-                      class="inance-lease-contract-item__contract-number contract-number"
+                      class="finance-lease-contract-item__contract-number contract-number"
                     >
-                      №222222222
+                      №111111111
                     </p>
-                    <div class="inance-lease-contract-item__date">
+                    <div class="finance-lease-contract-item__date">
                       <img
-                        class="inance-lease-contract-item__calendar-icon"
+                        class="finance-lease-contract-item__calendar-icon"
                         src="./assets/icons/Calendar_gray.svg"
-                        alt=""
+                        alt="Дата договора"
                       />
-                      <h6 class="inance-lease-contract-item__date-info">
+                      <h6 class="finance-lease-contract-item__date-info">
                         от 19.08.2024
                       </h6>
                     </div>
-                    <div class="inance-lease-contract-item__status">
-                      <div class="inance-lease-contract-item__round-icon"></div>
-                      <h6 class="inance-lease-contract-item__status-name">
+                    <div class="finance-lease-contract-item__status">
+                      <div
+                        class="finance-lease-contract-item__round-icon"
+                      ></div>
+                      <h6 class="finance-lease-contract-item__status-name">
                         Действующий
                       </h6>
                     </div>
                   </div>
-                  <div class="inance-lease-contract-item__actions">
+                  <div class="finance-lease-contract-item__actions">
                     <button class="btn btn--secondary btn--small">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -363,54 +291,76 @@
                     </button>
                   </div>
                 </div>
-                <div class="inance-lease-agreement-item__main">
-                  <div class="leasing-table">
-                    <div class="cell header">Предмет лизинга</div>
-                    <div class="cell header">Контрактная стоимость</div>
-                    <div class="cell header">Срок ДФЛ</div>
-                    <div class="cell header">Дата ближайшего платежа</div>
-                    <div class="cell header">
+                <div class="finance-lease-agreement-item__main">
+                  <div
+                    class="leasing-table"
+                    role="table"
+                    aria-label="Информация о договоре лизинга"
+                  >
+                    <div class="cell header" role="columnheader">
+                      Предмет лизинга
+                    </div>
+                    <div class="cell header" role="columnheader">
+                      Контрактная стоимость
+                    </div>
+                    <div class="cell header" role="columnheader">Срок ДФЛ</div>
+                    <div class="cell header" role="columnheader">
+                      Дата ближайшего платежа
+                    </div>
+                    <div class="cell header" role="columnheader">
                       Сумма оплаты ближайшего платежа
                     </div>
-                    <div class="cell header">Штрафные санкции</div>
-
-                    <div class="cell">Geely Tugella</div>
-                    <div class="cell"><b>105 000 BYN</b></div>
-                    <div class="cell"><b>До 22.07.2025</b></div>
-                    <div class="cell">09.01.2025</div>
-                    <div class="cell"><b>5 500 BYN</b></div>
-                    <div class="cell"><b>Погашены 100 BYN</b></div>
+                    <div class="cell header" role="columnheader">
+                      Штрафные санкции
+                    </div>
+                    <div class="cell" role="cell">Geely Tugella</div>
+                    <div class="cell" role="cell">
+                      <strong>105 000 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>До 22.07.2025</strong>
+                    </div>
+                    <div class="cell" role="cell">09.01.2025</div>
+                    <div class="cell" role="cell">
+                      <strong>5 500 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>Погашены 100 BYN</strong>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Contract 2 -->
             <div class="finance-lease-contracts__finance-lease-contract-item">
-              <div class="finance-lease-acontract-item__container">
-                <div class="inance-lease-contract-item__header">
-                  <div class="inance-lease-contract-item__info">
+              <div class="finance-lease-contract-item__container">
+                <div class="finance-lease-contract-item__header">
+                  <div class="finance-lease-contract-item__info">
                     <p
-                      class="inance-lease-contract-item__contract-number contract-number"
+                      class="finance-lease-contract-item__contract-number contract-number"
                     >
                       №222222222
                     </p>
-                    <div class="inance-lease-contract-item__date">
+                    <div class="finance-lease-contract-item__date">
                       <img
-                        class="inance-lease-contract-item__calendar-icon"
+                        class="finance-lease-contract-item__calendar-icon"
                         src="./assets/icons/Calendar_gray.svg"
-                        alt=""
+                        alt="Дата договора"
                       />
-                      <h6 class="inance-lease-contract-item__date-info">
-                        от 19.08.2024
+                      <h6 class="finance-lease-contract-item__date-info">
+                        от 15.07.2024
                       </h6>
                     </div>
-                    <div class="inance-lease-contract-item__status">
-                      <div class="inance-lease-contract-item__round-icon"></div>
-                      <h6 class="inance-lease-contract-item__status-name">
+                    <div class="finance-lease-contract-item__status">
+                      <div
+                        class="finance-lease-contract-item__round-icon"
+                      ></div>
+                      <h6 class="finance-lease-contract-item__status-name">
                         Действующий
                       </h6>
                     </div>
                   </div>
-                  <div class="inance-lease-contract-item__actions">
+                  <div class="finance-lease-contract-item__actions">
                     <button class="btn btn--secondary btn--small">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -465,54 +415,76 @@
                     </button>
                   </div>
                 </div>
-                <div class="inance-lease-agreement-item__main">
-                  <div class="leasing-table">
-                    <div class="cell header">Предмет лизинга</div>
-                    <div class="cell header">Контрактная стоимость</div>
-                    <div class="cell header">Срок ДФЛ</div>
-                    <div class="cell header">Дата ближайшего платежа</div>
-                    <div class="cell header">
+                <div class="finance-lease-agreement-item__main">
+                  <div
+                    class="leasing-table"
+                    role="table"
+                    aria-label="Информация о договоре лизинга"
+                  >
+                    <div class="cell header" role="columnheader">
+                      Предмет лизинга
+                    </div>
+                    <div class="cell header" role="columnheader">
+                      Контрактная стоимость
+                    </div>
+                    <div class="cell header" role="columnheader">Срок ДФЛ</div>
+                    <div class="cell header" role="columnheader">
+                      Дата ближайшего платежа
+                    </div>
+                    <div class="cell header" role="columnheader">
                       Сумма оплаты ближайшего платежа
                     </div>
-                    <div class="cell header">Штрафные санкции</div>
-
-                    <div class="cell">Geely Tugella</div>
-                    <div class="cell"><b>105 000 BYN</b></div>
-                    <div class="cell"><b>До 22.07.2025</b></div>
-                    <div class="cell">09.01.2025</div>
-                    <div class="cell"><b>5 500 BYN</b></div>
-                    <div class="cell"><b>Погашены 100 BYN</b></div>
+                    <div class="cell header" role="columnheader">
+                      Штрафные санкции
+                    </div>
+                    <div class="cell" role="cell">BMW X5</div>
+                    <div class="cell" role="cell">
+                      <strong>95 000 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>До 15.08.2025</strong>
+                    </div>
+                    <div class="cell" role="cell">15.02.2025</div>
+                    <div class="cell" role="cell">
+                      <strong>4 800 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>Погашены</strong>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Contract 3 -->
             <div class="finance-lease-contracts__finance-lease-contract-item">
-              <div class="finance-lease-acontract-item__container">
-                <div class="inance-lease-contract-item__header">
-                  <div class="inance-lease-contract-item__info">
+              <div class="finance-lease-contract-item__container">
+                <div class="finance-lease-contract-item__header">
+                  <div class="finance-lease-contract-item__info">
                     <p
-                      class="inance-lease-contract-item__contract-number contract-number"
+                      class="finance-lease-contract-item__contract-number contract-number"
                     >
-                      №222222222
+                      №333333333
                     </p>
-                    <div class="inance-lease-contract-item__date">
+                    <div class="finance-lease-contract-item__date">
                       <img
-                        class="inance-lease-contract-item__calendar-icon"
+                        class="finance-lease-contract-item__calendar-icon"
                         src="./assets/icons/Calendar_gray.svg"
-                        alt=""
+                        alt="Дата договора"
                       />
-                      <h6 class="inance-lease-contract-item__date-info">
-                        от 19.08.2024
+                      <h6 class="finance-lease-contract-item__date-info">
+                        от 01.09.2024
                       </h6>
                     </div>
-                    <div class="inance-lease-contract-item__status">
-                      <div class="inance-lease-contract-item__round-icon"></div>
-                      <h6 class="inance-lease-contract-item__status-name">
+                    <div class="finance-lease-contract-item__status">
+                      <div
+                        class="finance-lease-contract-item__round-icon"
+                      ></div>
+                      <h6 class="finance-lease-contract-item__status-name">
                         Действующий
                       </h6>
                     </div>
                   </div>
-                  <div class="inance-lease-contract-item__actions">
+                  <div class="finance-lease-contract-item__actions">
                     <button class="btn btn--secondary btn--small">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -567,131 +539,81 @@
                     </button>
                   </div>
                 </div>
-                <div class="inance-lease-agreement-item__main">
-                  <div class="leasing-table">
-                    <div class="cell header">Предмет лизинга</div>
-                    <div class="cell header">Контрактная стоимость</div>
-                    <div class="cell header">Срок ДФЛ</div>
-                    <div class="cell header">Дата ближайшего платежа</div>
-                    <div class="cell header">
+                <div class="finance-lease-agreement-item__main">
+                  <div
+                    class="leasing-table"
+                    role="table"
+                    aria-label="Информация о договоре лизинга"
+                  >
+                    <div class="cell header" role="columnheader">
+                      Предмет лизинга
+                    </div>
+                    <div class="cell header" role="columnheader">
+                      Контрактная стоимость
+                    </div>
+                    <div class="cell header" role="columnheader">Срок ДФЛ</div>
+                    <div class="cell header" role="columnheader">
+                      Дата ближайшего платежа
+                    </div>
+                    <div class="cell header" role="columnheader">
                       Сумма оплаты ближайшего платежа
                     </div>
-                    <div class="cell header">Штрафные санкции</div>
-
-                    <div class="cell">Geely Tugella</div>
-                    <div class="cell"><b>105 000 BYN</b></div>
-                    <div class="cell"><b>До 22.07.2025</b></div>
-                    <div class="cell">09.01.2025</div>
-                    <div class="cell"><b>5 500 BYN</b></div>
-                    <div class="cell"><b>Погашены 100 BYN</b></div>
+                    <div class="cell header" role="columnheader">
+                      Штрафные санкции
+                    </div>
+                    <div class="cell" role="cell">Toyota Camry</div>
+                    <div class="cell" role="cell">
+                      <strong>75 000 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>До 01.10.2025</strong>
+                    </div>
+                    <div class="cell" role="cell">01.03.2025</div>
+                    <div class="cell" role="cell">
+                      <strong>3 200 BYN</strong>
+                    </div>
+                    <div class="cell" role="cell">
+                      <strong>Задолженность 50 BYN</strong>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="pagination">
-            <button class="nav-btn" disabled>Назад</button>
-            <a href="./pages/autarization/autarization.html" class="active"
+          <nav class="pagination" aria-label="Пагинация договоров">
+            <button class="nav-btn" disabled aria-label="Предыдущая страница">
+              Назад
+            </button>
+            <a
+              href="./pages/authorization/authorization.html"
+              class="active"
+              aria-current="page"
               >01</a
             >
-            <a href="#">02</a>
-            <a href="#">03</a>
-            <a href="#">04</a>
-            <a href="#">05</a>
-            <a href="#">06</a>
-            <button class="nav-btn">Вперед</button>
-          </div>
+            <a href="#" aria-label="Страница 2">02</a>
+            <a href="#" aria-label="Страница 3">03</a>
+            <a href="#" aria-label="Страница 4">04</a>
+            <a href="#" aria-label="Страница 5">05</a>
+            <a href="#" aria-label="Страница 6">06</a>
+            <button class="nav-btn" aria-label="Следующая страница">
+              Вперед
+            </button>
+          </nav>
         </div>
       </div>
     </main>
 
-    <footer>
-      <div class="footer__container">
-        <div class="footer__top-part">
-          <div class="footer__content">
-            <div class="footer__logo-container">
-              <img
-                class="footer__logo"
-                src="../../assets/img/LOGO.svg"
-                alt=""
-              />
-              <button class="btn btn--primary btn--small">
-                Получить консультацию
-              </button>
-            </div>
-            <div class="footer__info-container">
-              <ul class="footer__nav-list">
-                <li class="text footer__nav-item">Договоры</li>
-                <li class="text footer__nav-item">Онлайн - заявки</li>
-                <li class="text footer__nav-item">Вопрос - Ответ</li>
-                <li class="text footer__nav-item">Уведомления</li>
-                <li class="text footer__nav-item">Личный кабинет</li>
-              </ul>
-              <div class="footer__contacts">
-                <p class="footer__title text text--semibold">Контакты</p>
-                <div class="footer__phone">
-                  <img
-                    class="footer__contact-icon"
-                    src="../../assets/icons/Phone.svg"
-                    alt=""
-                  />
-                  <p class="text">+375 (44) 555 55 55</p>
-                </div>
-                <div class="footer__address">
-                  <img
-                    class="footer__contact-icon"
-                    src="../../assets/icons/Map.svg"
-                    alt=""
-                  />
-                  <p class="text footer__address-text">
-                    г. Минск, пр. Победителей, 89/3, пом. 5, каб. 2б
-                  </p>
-                </div>
-                <div class="footer__email">
-                  <img
-                    class="footer__contact-icon"
-                    src="../../assets/icons/Email.svg"
-                    alt=""
-                  />
-                  <p class="text">example@gmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer__map">
-            <img
-              class="footer__map-img"
-              src="../../assets/img/Снимок экрана 2025-06-18 в 12.15.33 1.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="footer__bottom-part">
-          <div class="footer__social">
-            <img
-              class="footer__social-icon"
-              src="../../assets/icons/social/Facebook.svg"
-              alt=""
-            />
-            <img
-              class="footer__social-icon"
-              src="../../assets/icons/social/Telegram.svg"
-              alt=""
-            />
-            <img
-              class="footer__social-icon"
-              src="../../assets/icons/social/Instagram.svg"
-              alt=""
-            />
-          </div>
-          <p class="text footer__details">
-            © 2004–2024, юридические данные OOO “ Компании”,
-          </p>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer включается из компонента -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("./components/footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML =
+            "<footer>" + data + "</footer>";
+        });
+    </script>
   </body>
 
-  <script src="./components/header/header.js"></script>
   <script src="./components/header/header.js"></script>
 </html>

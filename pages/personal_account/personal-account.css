@@ -41,7 +41,7 @@
   align-items: end;
 }
 
-.personal-profile__button-comtainer {
+.personal-profile__button-container {
   display: flex;
   gap: 8px;
 }

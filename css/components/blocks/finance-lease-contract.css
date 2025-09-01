@@ -17,64 +17,64 @@
   gap: 32px;
 }
 
-.finance-lease-acontract-item__container {
+.finance-lease-contract-item__container {
   background-color: var(--color-white);
   border-radius: 16px;
 }
 
-.inance-lease-contract-item__header {
+.finance-lease-contract-item__header {
   display: flex;
   justify-content: space-between;
   padding: 24px;
 }
 
-.inance-lease-agreement-item__main {
+.finance-lease-agreement-item__main {
   padding: 0px 24px 24px 24px;
 }
 
-.inance-lease-contract-item__info {
+.finance-lease-contract-item__info {
   display: flex;
   gap: 24px;
 }
 
-.inance-lease-contract-item__contract-number {
+.finance-lease-contract-item__contract-number {
   display: flex;
   align-items: center;
 }
 
-.inance-lease-contract-item__status-name {
+.finance-lease-contract-item__status-name {
   color: var(--color-primary);
 }
 
-.inance-lease-contract-item__date {
+.finance-lease-contract-item__date {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.inance-lease-contract-item__calendar-icon {
+.finance-lease-contract-item__calendar-icon {
   width: 20px;
   height: 20px;
 }
 
-.inance-lease-contract-item__date {
+.finance-lease-contract-item__date {
   color: var(--color-gray);
 }
 
-.inance-lease-contract-item__round-icon {
+.finance-lease-contract-item__round-icon {
   width: 10px;
   height: 10px;
   border-radius: 100px;
   background-color: var(--color-primary);
 }
 
-.inance-lease-contract-item__status {
+.finance-lease-contract-item__status {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.inance-lease-contract-item__actions {
+.finance-lease-contract-item__actions {
   display: flex;
   gap: 16px;
 }

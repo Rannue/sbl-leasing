@@ -41,19 +41,35 @@
   <div class="header__bottom">
     <nav class="header__nav-container">
       <ul class="header__nav">
-        <li class="nav-item text text--medium header__nav-item active">
+        <li
+          id="nav-contracts"
+          class="nav-item text text--medium header__nav-item"
+          data-page="contracts"
+        >
           Договоры
         </li>
-        <li class="nav-item text text--medium header__nav-item">
+        <li
+          id="nav-applications"
+          class="nav-item text text--medium header__nav-item"
+          data-page="applications"
+        >
           Онлайн - заявки
         </li>
         <a
+          id="nav-faq"
           class="nav-item text text--medium header__nav-item"
           href="../../pages/faq/faq.html"
+          data-page="faq"
         >
           <li>Вопрос - Ответ</li></a
         >
-        <li class="nav-item text text--medium header__nav-item">Уведомления</li>
+        <li
+          id="nav-notifications"
+          class="nav-item text text--medium header__nav-item"
+          data-page="notifications"
+        >
+          Уведомления
+        </li>
       </ul>
     </nav>
     <div class="header__personal-profile">
@@ -64,13 +80,13 @@
         <p id="user-name" class="header__user-name text--semibold">
           Сергеев Сергей
         </p>
-        <li class="header__profile-link">
+        <button id="profile-link-btn" class="header__profile-link">
           <p style="color: var(--color-primary)">Перейти в профиль</p>
           <img
             class="header__profile-arrow"
             src="../../assets/icons/Arrow-right.svg"
           />
-        </li>
+        </button>
       </div>
     </div>
   </div>
