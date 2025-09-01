@@ -8,19 +8,22 @@
   </head>
   <body>
     <header>
-      <iframe
-        id="headerFrame"
-        src="./components/ header/header.html"
-        frameborder="0"
-      ></iframe>
-      <!-- <div class="header__container">
+      <div id="menu" class="header__container">
         <div class="header__top">
-          <img class="header__logo" src="./assets/img/LOGO.svg" alt="" />
+          <div class="header__logo-container">
+            <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" />
+            <img
+              id="header__close-btn"
+              class="header__close-btn icon--large"
+              src="../../assets/icons/Close.svg"
+              alt=""
+            />
+          </div>
           <div class="header__manager-container">
             <div class="header__manager-info">
               <img
                 class="header__manager-photo"
-                src="./assets/img/_Professional portrait of a manager in a modern office setting. Person aged 25–40, wearing a light-colored shirt or classic blazer, friendly and confident expression with a slight smile. Neutral light background (white or light gray). Minimalisti.png"
+                src="../../assets/img/_Professional portrait of a manager in a modern office setting. Person aged 25–40, wearing a light-colored shirt or classic blazer, friendly and confident expression with a slight smile. Neutral light background (white or light gray). Minimalisti.png"
                 alt=""
               />
               <div class="header__manager-name-and-position">
@@ -42,20 +45,64 @@
           </div>
         </div>
         <div class="header__bottom">
-          <nav>
+          <nav class="header__nav-container">
             <ul class="header__nav">
-              <li class="text text--medium header__nav-item active">
-                Договоры
-              </li>
-              <li class="text text--medium header__nav-item">
+              <a href="../../index.html">
+                <li class="nav-item text text--medium header__nav-item active">
+                  Договоры
+                </li></a
+              >
+              <li class="nav-item text text--medium header__nav-item">
                 Онлайн - заявки
               </li>
-              <li class="text text--medium header__nav-item">Вопрос - Ответ</li>
-              <li class="text text--medium header__nav-item">Уведомления</li>
+              <a href="./pages/faq/faq.html">
+                <li class="nav-item text text--medium header__nav-item">
+                  Вопрос - Ответ
+                </li></a
+              >
+              <li class="nav-item text text--medium header__nav-item">
+                Уведомления
+              </li>
             </ul>
           </nav>
+          <div class="header__personal-profile">
+            <div class="header__user-avatar">
+              <h4 id="header__user-first-letter"></h4>
+            </div>
+            <div class="header__link-container">
+              <p id="user-name" class="header__user-name text--semibold">
+                Сергеев Сергей
+              </p>
+              <li class="header__profile-link">
+                <a href="./pages/personal_account/personal-account.html">
+                  <p style="color: var(--color-primary)">
+                    Перейти в профиль
+                  </p></a
+                >
+
+                <img
+                  class="header__profile-arrow"
+                  src="../../assets/icons/Arrow-right.svg"
+                />
+              </li>
+            </div>
+          </div>
         </div>
-      </div> -->
+      </div>
+      <div class="header__mobile-container">
+        <div class="header__logo-container">
+          <a href="../../index.html">
+            <img class="header__logo" src="../../assets/img/LOGO.svg" alt=""
+          /></a>
+        </div>
+        <div id="burger-btn" class="header__burger-menu">
+          <img
+            class="header__logo icon--large"
+            src="../../assets/icons/Burger.svg"
+            alt=""
+          />
+        </div>
+      </div>
     </header>
 
     <main class="main-container">
@@ -77,7 +124,7 @@
                 <div class="payment-item__icon-container">
                   <img
                     class="payment-item__icon"
-                    src="./assets/icons/System.svg"
+                    src="./assets/icons/Calendar.svg"
                     alt=""
                   />
                 </div>
@@ -129,7 +176,7 @@
                 <div class="payment-item__icon-container">
                   <img
                     class="payment-item__icon"
-                    src="./assets/icons/System.svg"
+                    src="./assets/icons/Calendar.svg"
                     alt=""
                   />
                 </div>
@@ -181,7 +228,7 @@
                 <div class="payment-item__icon-container">
                   <img
                     class="payment-item__icon"
-                    src="./assets/icons/System.svg"
+                    src="./assets/icons/Calendar.svg"
                     alt=""
                   />
                 </div>
@@ -247,7 +294,7 @@
                     <div class="inance-lease-contract-item__date">
                       <img
                         class="inance-lease-contract-item__calendar-icon"
-                        src="./assets/icons/System.svg"
+                        src="./assets/icons/Calendar_gray.svg"
                         alt=""
                       />
                       <h6 class="inance-lease-contract-item__date-info">
@@ -349,7 +396,109 @@
                     <div class="inance-lease-contract-item__date">
                       <img
                         class="inance-lease-contract-item__calendar-icon"
-                        src="./assets/icons/System.svg"
+                        src="./assets/icons/Calendar_gray.svg"
+                        alt=""
+                      />
+                      <h6 class="inance-lease-contract-item__date-info">
+                        от 19.08.2024
+                      </h6>
+                    </div>
+                    <div class="inance-lease-contract-item__status">
+                      <div class="inance-lease-contract-item__round-icon"></div>
+                      <h6 class="inance-lease-contract-item__status-name">
+                        Действующий
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="inance-lease-contract-item__actions">
+                    <button class="btn btn--secondary btn--small">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20.25 13.5V6C20.25 5.66848 20.1182 5.35063 19.8838 5.11621C19.6788 4.9112 19.41 4.78436 19.124 4.75586L19 4.75H5C4.66848 4.75 4.35063 4.88179 4.11621 5.11621C3.88179 5.35063 3.75 5.66848 3.75 6V16C3.75 16.3315 3.88179 16.6494 4.11621 16.8838C4.35063 17.1182 4.66848 17.25 5 17.25H12C12.4142 17.25 12.75 17.5858 12.75 18C12.75 18.4142 12.4142 18.75 12 18.75H5C4.27065 18.75 3.57139 18.4601 3.05566 17.9443C2.53994 17.4286 2.25 16.7293 2.25 16V6C2.25 5.27065 2.53994 4.57139 3.05566 4.05566C3.57139 3.53994 4.27065 3.25 5 3.25H19C19.7293 3.25 20.4286 3.53994 20.9443 4.05566C21.4601 4.57139 21.75 5.27065 21.75 6V13.5C21.75 13.9142 21.4142 14.25 21 14.25C20.5858 14.25 20.25 13.9142 20.25 13.5Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M20.5841 5.37604C20.9287 5.14628 21.3943 5.2394 21.6241 5.58405C21.8539 5.9287 21.7607 6.39433 21.4161 6.62409L12.4161 12.6241C12.1642 12.792 11.836 12.792 11.5841 12.6241L2.58405 6.62409C2.2394 6.39433 2.14628 5.9287 2.37604 5.58405C2.60581 5.2394 3.07144 5.14628 3.41608 5.37604L12.0001 11.0987L20.5841 5.37604Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M21 17.25C21.4142 17.25 21.75 17.5858 21.75 18C21.75 18.4142 21.4142 18.75 21 18.75H15C14.5858 18.75 14.25 18.4142 14.25 18C14.25 17.5858 14.5858 17.25 15 17.25H21Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M17.4697 14.4697C17.7626 14.1768 18.2373 14.1768 18.5302 14.4697L21.5302 17.4697C21.8231 17.7626 21.8231 18.2373 21.5302 18.5302L18.5302 21.5302C18.2373 21.8231 17.7626 21.8231 17.4697 21.5302C17.1768 21.2373 17.1768 20.7626 17.4697 20.4697L19.9394 17.9999L17.4697 15.5302C17.1768 15.2373 17.1768 14.7626 17.4697 14.4697Z"
+                          class="btn-icon"
+                        />
+                      </svg>
+                      Запрос на выгрузку ДФЛ
+                    </button>
+                    <button class="btn btn--primary btn--small">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M13.25 7V3C13.25 2.58579 13.5858 2.25 14 2.25C14.4142 2.25 14.75 2.58579 14.75 3V7C14.75 7.0663 14.7764 7.12987 14.8232 7.17676C14.8701 7.22364 14.9337 7.25 15 7.25H19C19.4142 7.25 19.75 7.58579 19.75 8C19.75 8.41421 19.4142 8.75 19 8.75H15C14.5359 8.75 14.0909 8.56549 13.7627 8.2373C13.4345 7.90912 13.25 7.46413 13.25 7Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M4.25 19V5C4.25 4.27065 4.53994 3.57139 5.05566 3.05566C5.57139 2.53994 6.27065 2.25 7 2.25H14C14.1989 2.25 14.3896 2.32907 14.5303 2.46973L19.5303 7.46973C19.6709 7.61038 19.75 7.80109 19.75 8V19C19.75 19.7293 19.4601 20.4286 18.9443 20.9443C18.4286 21.4601 17.7293 21.75 17 21.75H7C6.27065 21.75 5.57139 21.4601 5.05566 20.9443C4.53994 20.4286 4.25 19.7293 4.25 19ZM5.75 19L5.75586 19.124C5.78436 19.41 5.9112 19.6788 6.11621 19.8838C6.35063 20.1182 6.66848 20.25 7 20.25H17C17.3315 20.25 17.6494 20.1182 17.8838 19.8838C18.1182 19.6494 18.25 19.3315 18.25 19V8.31055L13.6895 3.75H7C6.66848 3.75 6.35063 3.88179 6.11621 4.11621C5.88179 4.35063 5.75 4.66848 5.75 5V19Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M15 16.25C15.4142 16.25 15.75 16.5858 15.75 17C15.75 17.4142 15.4142 17.75 15 17.75H9C8.58579 17.75 8.25 17.4142 8.25 17C8.25 16.5858 8.58579 16.25 9 16.25H15Z"
+                          class="btn-icon"
+                        />
+                        <path
+                          d="M15 12.25C15.4142 12.25 15.75 12.5858 15.75 13C15.75 13.4142 15.4142 13.75 15 13.75H9C8.58579 13.75 8.25 13.4142 8.25 13C8.25 12.5858 8.58579 12.25 9 12.25H15Z"
+                          class="btn-icon"
+                        />
+                      </svg>
+                      Шаблоны документов
+                    </button>
+                  </div>
+                </div>
+                <div class="inance-lease-agreement-item__main">
+                  <div class="leasing-table">
+                    <div class="cell header">Предмет лизинга</div>
+                    <div class="cell header">Контрактная стоимость</div>
+                    <div class="cell header">Срок ДФЛ</div>
+                    <div class="cell header">Дата ближайшего платежа</div>
+                    <div class="cell header">
+                      Сумма оплаты ближайшего платежа
+                    </div>
+                    <div class="cell header">Штрафные санкции</div>
+
+                    <div class="cell">Geely Tugella</div>
+                    <div class="cell"><b>105 000 BYN</b></div>
+                    <div class="cell"><b>До 22.07.2025</b></div>
+                    <div class="cell">09.01.2025</div>
+                    <div class="cell"><b>5 500 BYN</b></div>
+                    <div class="cell"><b>Погашены 100 BYN</b></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="finance-lease-contracts__finance-lease-contract-item">
+              <div class="finance-lease-acontract-item__container">
+                <div class="inance-lease-contract-item__header">
+                  <div class="inance-lease-contract-item__info">
+                    <p
+                      class="inance-lease-contract-item__contract-number contract-number"
+                    >
+                      №222222222
+                    </p>
+                    <div class="inance-lease-contract-item__date">
+                      <img
+                        class="inance-lease-contract-item__calendar-icon"
+                        src="./assets/icons/Calendar_gray.svg"
                         alt=""
                       />
                       <h6 class="inance-lease-contract-item__date-info">
@@ -459,34 +608,31 @@
     <footer>
       <div class="footer__container">
         <div class="footer__top-part">
-          <div class="footer__wrapper">
-            <div class="footer__left-side">
-              <img class="footer__logo" src="./assets/img/LOGO.svg" alt="" />
+          <div class="footer__content">
+            <div class="footer__logo-container">
+              <img
+                class="footer__logo"
+                src="../../assets/img/LOGO.svg"
+                alt=""
+              />
               <button class="btn btn--primary btn--small">
                 Получить консультацию
               </button>
             </div>
-          </div>
-          <div class="footer__wrapper">
-            <div class="footer__right-side">
-              <div class="footer__wrapper">
-                <div class="footer__nav">
-                  <ul class="footer__nav-list">
-                    <li class="text footer__nav-item">Договоры</li>
-                    <li class="text footer__nav-item">Онлайн - заявки</li>
-                    <li class="text footer__nav-item">Вопрос - Ответ</li>
-                    <li class="text footer__nav-item">Уведомления</li>
-                    <li class="text footer__nav-item">Личный кабинет</li>
-                  </ul>
-                </div>
-              </div>
-
+            <div class="footer__info-container">
+              <ul class="footer__nav-list">
+                <li class="text footer__nav-item">Договоры</li>
+                <li class="text footer__nav-item">Онлайн - заявки</li>
+                <li class="text footer__nav-item">Вопрос - Ответ</li>
+                <li class="text footer__nav-item">Уведомления</li>
+                <li class="text footer__nav-item">Личный кабинет</li>
+              </ul>
               <div class="footer__contacts">
                 <p class="footer__title text text--semibold">Контакты</p>
                 <div class="footer__phone">
                   <img
                     class="footer__contact-icon"
-                    src="./assets/icons/Белая/Devices.svg"
+                    src="../../assets/icons/Phone.svg"
                     alt=""
                   />
                   <p class="text">+375 (44) 555 55 55</p>
@@ -494,47 +640,47 @@
                 <div class="footer__address">
                   <img
                     class="footer__contact-icon"
-                    src="./assets/icons/Белая/Map.svg"
+                    src="../../assets/icons/Map.svg"
                     alt=""
                   />
-                  <p class="text">
+                  <p class="text footer__address-text">
                     г. Минск, пр. Победителей, 89/3, пом. 5, каб. 2б
                   </p>
                 </div>
                 <div class="footer__email">
                   <img
                     class="footer__contact-icon"
-                    src="./assets/icons/Белая/Communication.svg"
+                    src="../../assets/icons/Email.svg"
                     alt=""
                   />
                   <p class="text">example@gmail.com</p>
                 </div>
               </div>
-              <div class="footer__map">
-                <img
-                  class="footer__map-img"
-                  src="../assets/img/Снимок экрана 2025-06-18 в 12.15.33 1.png"
-                  alt=""
-                />
-              </div>
             </div>
+          </div>
+          <div class="footer__map">
+            <img
+              class="footer__map-img"
+              src="../../assets/img/Снимок экрана 2025-06-18 в 12.15.33 1.png"
+              alt=""
+            />
           </div>
         </div>
         <div class="footer__bottom-part">
           <div class="footer__social">
             <img
               class="footer__social-icon"
-              src="./assets/icons/Facebook.svg"
+              src="../../assets/icons/social/Facebook.svg"
               alt=""
             />
             <img
               class="footer__social-icon"
-              src="./assets/icons/Telegram.svg"
+              src="../../assets/icons/social/Telegram.svg"
               alt=""
             />
             <img
               class="footer__social-icon"
-              src="./assets/icons/Instagram.svg"
+              src="../../assets/icons/social/Instagram.svg"
               alt=""
             />
           </div>
@@ -546,16 +692,6 @@
     </footer>
   </body>
 
-  <script>
-    const iframe = document.getElementById("headerFrame");
-
-    function adjustIframeHeight() {
-      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      iframe.style.height = iframeDoc.body.scrollHeight + "px";
-    }
-
-    iframe.onload = adjustIframeHeight;
-
-    window.addEventListener("resize", adjustIframeHeight);
-  </script>
+  <script src="./components/header/header.js"></script>
+  <script src="./components/header/header.js"></script>
 </html>

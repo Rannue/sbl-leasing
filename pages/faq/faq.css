@@ -1,32 +1,61 @@
-.personal-profile__container {
+.faq__container {
   background-color: var(--color-white);
   border-radius: 16px;
   padding: 32px;
 }
 
-.personal-profile__wrapper {
+.faq__wrapper {
   display: flex;
   gap: 32px;
   flex-grow: 1;
 }
 
-.personal-profile__divider {
+.faq__divider {
   width: 1px;
   background-color: var(--color-gray200);
 }
 
-.personal-profile__content {
+.faq__content {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 100%;
 }
 
-.personal-profile__info-block,
-.personal-profile__email-wrapper {
+.faq__info-block {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 16px;
+}
+
+.faq__info-block h4,
+.faq__icon-color {
+  transition: 0.2s;
+}
+
+.faq__info-block:hover h4 {
+  color: var(--color-primary);
+}
+
+.faq__info-block:hover .faq__icon-color {
+  fill: var(--color-primary);
+}
+
+.faq__question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__answer {
+  display: none;
+  transition: 0.2s;
+  color: var(--color-gray);
+}
+
+.faq__answer.open {
+  display: flex;
 }
 
 .personal-profile__content-divider {

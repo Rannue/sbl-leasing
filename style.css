@@ -11,6 +11,7 @@
 @import url("./css/overlay.css");
 @import url("./css/components/nav.css");
 @import url("./css/components/toggle.css");
+@import url("./css/components/link.css");
 
 @import url("./components/header/header.css");
 @import url("./components/footer/footer.css");
@@ -20,8 +21,9 @@
 @import url("./css/components/blocks/payments.css");
 @import url("./css/components/blocks/finance-lease-acontract.css");
 
-@import url("./pages/autarization/autarization.css");
+@import url("./pages/autarization/authorization.css");
 @import url("./pages/personal_account/personal-account.css");
+@import url("./pages/faq/faq.css");
 @import url("./pages/404/404.css");
 
 body {
@@ -73,7 +75,6 @@ main {
 .main__container {
   max-width: 1464px;
   margin: 0 auto;
-  height: 100vh;
 }
 
 .main__container-wrapper {
@@ -93,4 +94,19 @@ main {
 .icon--large {
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 689px) {
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  .main__container-wrapper {
+    padding: 42px 16px;
+  }
 }

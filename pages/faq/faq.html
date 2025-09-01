@@ -12,7 +12,8 @@
       <div id="menu" class="header__container">
         <div class="header__top">
           <div class="header__logo-container">
-            <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" />
+       <img class="header__logo" src="../../assets/img/LOGO.svg" alt="" /></a>
+          
             <img
               id="header__close-btn"
               class="header__close-btn icon--large"
@@ -56,8 +57,8 @@
               <li class="nav-item text text--medium header__nav-item">
                 Онлайн - заявки
               </li>
-              <a href="../faq/faq.html">
-                <li class="nav-item text text--medium header__nav-item">
+              <a href="./pages/faq/faq.html">
+                <li class="nav-item text text--medium header__nav-item active">
                   Вопрос - Ответ
                 </li></a
               >
@@ -75,13 +76,15 @@
                 Сергеев Сергей
               </p>
               <li class="header__profile-link">
-                <a href="../autarization/autarization.html">
-                  <p style="color: #f45d01">Выйти из профиля</p></a
+                <a href="../personal_account/personal-account.html">
+                  <p style="color: var(--color-primary)">
+                    Перейти в профиль
+                  </p></a
                 >
 
                 <img
                   class="header__profile-arrow"
-                  src="../../assets/icons/Arrow-left_orange.svg"
+                  src="../../assets/icons/Arrow-right.svg"
                 />
               </li>
             </div>
@@ -105,143 +108,134 @@
     </header>
     <main>
       <div class="main__container">
-        <div class="main__container-wrapper personal-profile">
-          <h1>Личный кабинет</h1>
-          <div class="personal-profile__container">
-            <div class="personal-profile__wrapper">
+        <div class="main__container-wrapper faq">
+          <h1>Вопрос - Ответ</h1>
+          <div class="faq__container">
+            <div class="faq__wrapper">
               <nav>
-                <ul class="personal-profile__nav nav">
+                <ul class="faq__nav nav">
                   <li
                     data-type="personal"
                     class="text text--medium personal-profile__nav-item nav-item active"
                   >
-                    Личные данные
+                    Категория вопроса
                   </li>
                   <li
                     data-type="contacts"
                     class="text text--medium personal-profile__nav-item nav-item"
                   >
-                    Контактная информация
+                    Категория вопроса
                   </li>
                   <li
                     data-type="settings"
                     class="text text--medium personal-profile__nav-item nav-item"
                   >
-                    Настройки
+                    Категория вопроса
                   </li>
                 </ul>
               </nav>
-              <div class="personal-profile__divider"></div>
-              <!-- personal -->
-              <div id="personal-content" class="personal-profile__content">
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">ФИО</h6>
-                  <h6 class="text--gray">Иванов Иван Иванович</h6>
-                </div>
-                <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Серия и номер паспорта</h6>
-                  <h6 class="text--gray">HB00000000</h6>
-                </div>
-                <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">
-                    Идентификационный номер паспорта
-                  </h6>
-                  <h6 class="text--gray">000000000000000000000</h6>
-                </div>
-                <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Кем выдан паспорт</h6>
-                  <h6 class="text--gray">Советский РОВД г.Гомеля</h6>
-                </div>
-                <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Адрес регистрации</h6>
-                  <h6 class="text--gray">
+              <div class="faq__divider"></div>
+              <div id="faq-content" class="faq__content">
+                <div class="faq__info-block">
+                  <div class="faq__question">
+                    <h4>Наименование вопроса?</h4>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      class="faq__icon-plus"
+                    >
+                      <path
+                        d="M15 25.3327V6.66602C15 6.11373 15.4477 5.66602 16 5.66602C16.5523 5.66602 17 6.11373 17 6.66602V25.3327C17 25.885 16.5523 26.3327 16 26.3327C15.4477 26.3327 15 25.885 15 25.3327Z"
+                        class="faq__icon-color"
+                      />
+                      <path
+                        d="M25.3332 15C25.8855 15 26.3332 15.4477 26.3332 16C26.3332 16.5523 25.8855 17 25.3332 17H6.6665C6.11422 17 5.6665 16.5523 5.6665 16C5.6665 15.4477 6.11422 15 6.6665 15H25.3332Z"
+                        class="faq__icon-color"
+                      />
+                    </svg>
+                    <!-- <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      class="faq__icon-minus"
+                    >
+                      <path
+                        d="M25.3332 15C25.8855 15 26.3332 15.4477 26.3332 16C26.3332 16.5523 25.8855 17 25.3332 17H6.6665C6.11422 17 5.6665 16.5523 5.6665 16C5.6665 15.4477 6.11422 15 6.6665 15H25.3332Z"
+                        class="faq__icon-color"
+                      />
+                    </svg> -->
+                  </div>
+                  <p class="faq__answer">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </h6>
-                </div>
-              </div>
-              <!-- contacts -->
-              <div
-                id="contacts-content"
-                class="personal-profile__content"
-                style="display: none"
-              >
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Мобильный телефон</h6>
-                  <h6 class="text--gray">+375 00 000 00 00</h6>
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </div>
                 <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <!-- view-mode -->
-                  <div class="personal-profile__email-container view-mode">
-                    <div class="personal-profile__email-wrapper">
-                      <h6 class="text--semibold">Электронная почта</h6>
-                      <h6 id="email-text" class="text--gray">
-                        example@gmail.com
-                      </h6>
-                    </div>
-                    <button
-                      id="personal-profile__edit-btn"
-                      class="btn btn--secondary btn--small"
+                <div class="faq__info-block">
+                  <div class="faq__question">
+                    <h4>Наименование вопроса?</h4>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      class="faq__icon-plus"
                     >
-                      Редактировать
-                    </button>
-                  </div>
-                  <!-- edit-mode -->
-                  <div
-                    style="display: none"
-                    class="personal-profile__email-container edit-mode"
-                  >
-                    <div class="personal-profile__email-wrapper">
-                      <h6 class="text--semibold">Электронная почта</h6>
-                      <input
-                        id="email-input"
-                        class="input input--small"
-                        type="text"
+                      <path
+                        d="M15 25.3327V6.66602C15 6.11373 15.4477 5.66602 16 5.66602C16.5523 5.66602 17 6.11373 17 6.66602V25.3327C17 25.885 16.5523 26.3327 16 26.3327C15.4477 26.3327 15 25.885 15 25.3327Z"
+                        class="faq__icon-color"
                       />
-                    </div>
-                    <div class="personal-profile__button-comtainer">
-                      <button
-                        id="personal-profile__cancel-btn"
-                        class="btn btn--secondary btn--small"
-                      >
-                        Отмена
-                      </button>
-                      <button
-                        id="personal-profile__save-btn"
-                        class="btn btn--primary btn--small"
-                      >
-                        Сохранить
-                      </button>
-                    </div>
+                      <path
+                        d="M25.3332 15C25.8855 15 26.3332 15.4477 26.3332 16C26.3332 16.5523 25.8855 17 25.3332 17H6.6665C6.11422 17 5.6665 16.5523 5.6665 16C5.6665 15.4477 6.11422 15 6.6665 15H25.3332Z"
+                        class="faq__icon-color"
+                      />
+                    </svg>
                   </div>
-                </div>
-              </div>
-              <!-- settings -->
-              <div
-                style="display: none"
-                id="settings-content"
-                class="personal-profile__content"
-              >
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Дублировать уведомления по СМС</h6>
-                  <label class="personal-profile__toggle switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                  </label>
+                  <p class="faq__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </div>
                 <div class="personal-profile__content-divider"></div>
-                <div class="personal-profile__info-block">
-                  <h6 class="text--semibold">Дублировать уведомления по СМС</h6>
-                  <label class="personal-profile__toggle switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                  </label>
+                <div class="faq__info-block">
+                  <div class="faq__question">
+                    <h4>Наименование вопроса?</h4>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      class="faq__icon-plus"
+                    >
+                      <path
+                        d="M15 25.3327V6.66602C15 6.11373 15.4477 5.66602 16 5.66602C16.5523 5.66602 17 6.11373 17 6.66602V25.3327C17 25.885 16.5523 26.3327 16 26.3327C15.4477 26.3327 15 25.885 15 25.3327Z"
+                        class="faq__icon-color"
+                      />
+                      <path
+                        d="M25.3332 15C25.8855 15 26.3332 15.4477 26.3332 16C26.3332 16.5523 25.8855 17 25.3332 17H6.6665C6.11422 17 5.6665 16.5523 5.6665 16C5.6665 15.4477 6.11422 15 6.6665 15H25.3332Z"
+                        class="faq__icon-color"
+                      />
+                    </svg>
+                  </div>
+                  <p class="faq__answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </div>
               </div>
             </div>
@@ -334,7 +328,7 @@
         </div>
       </div>
     </footer>
-    <script src="../personal_account/personal-account.js"></script>
+    <script src="../faq/faq.js"></script>
     <script src="../../components/header/header.js"></script>
   </body>
 </html>

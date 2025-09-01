@@ -42,15 +42,16 @@ openTechnicalSupportFormButton.addEventListener("click", (e) => {
           type="text"
           id="name"
           name="user_name"
+          required
         />
       </label>
 
       <label class="technical-support__label" for="feedback-format">
         Формат обратной связи*
         <select class="select select--small" name="feedback-format" required>
-          <option value="designer">Дизайнер</option>
-          <option value="developer">Разработчик</option>
-          <option value="manager">Менеджер</option>
+          <option value="designer">item1</option>
+          <option value="developer">item2</option>
+          <option value="manager">item3</option>
         </select>
       </label>
 
@@ -74,8 +75,6 @@ openTechnicalSupportFormButton.addEventListener("click", (e) => {
   </form>
     </div>`
   );
-
-  //   document.body.classList.add("no-scroll");
 
   const closeTechnicalSupportFormButton = document.getElementById("close-icon");
   if (closeTechnicalSupportFormButton) {
