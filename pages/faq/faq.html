@@ -9,6 +9,7 @@
       content="Часто задаваемые вопросы и ответы по услугам СБЛ Лизинг - помощь клиентам по договорам финансовой аренды"
     />
     <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../notifications/notifications.css" />
   </head>
   <body>
     <!-- Header включается из компонента -->
@@ -163,6 +164,10 @@
         </div>
       </div>
     </main>
+
+    <!-- Overlay для затемнения фона -->
+    <div class="overlay notifications-overlay" id="notifications-overlay"></div>
+
     <!-- Footer включается из компонента -->
     <div id="footer-placeholder"></div>
     <script>
@@ -175,5 +180,6 @@
     </script>
     <script src="../faq/faq.js"></script>
     <script src="../../components/header/header.js"></script>
+    <script src="../notifications/notifications.js"></script>
   </body>
 </html>

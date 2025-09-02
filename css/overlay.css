@@ -6,3 +6,23 @@
   height: 100vh;
   z-index: 1;
 }
+
+/* Overlay для уведомлений с усиленным затемнением */
+.notifications-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(12, 12, 12, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.notifications-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}

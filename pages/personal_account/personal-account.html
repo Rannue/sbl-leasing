@@ -9,6 +9,7 @@
       content="Личный кабинет пользователя СБЛ Лизинг - управление личными данными, контактной информацией и настройками"
     />
     <link rel="stylesheet" href="../../../style.css" />
+    <link rel="stylesheet" href="../notifications/notifications.css" />
   </head>
   <body>
     <!-- Header включается из компонента -->
@@ -178,6 +179,103 @@
         </div>
       </div>
     </main>
+
+    <!-- Overlay для затемнения фона -->
+    <div class="overlay notifications-overlay" id="notifications-overlay"></div>
+
+    <!-- Модальное окно уведомлений -->
+    <div class="notifications-modal" id="notifications-modal">
+      <div class="notifications-modal__header">
+        <h2 class="notifications-modal__title">Уведомления</h2>
+        <button class="close-btn" id="close-notifications">
+          <svg
+            class="svg-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="notifications-modal__content">
+        <div class="notifications-list">
+          <!-- Пример уведомлений -->
+          <div class="notification-item notification-item--unread">
+            <div class="notification-item__header">
+              <div class="notification-item__title">Новое сообщение</div>
+              <div class="notification-item__time">2 мин назад</div>
+            </div>
+            <div class="notification-item__content">
+              У вас есть новое сообщение в системе. Пожалуйста, проверьте ваш
+              личный кабинет.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-item__header">
+              <div class="notification-item__title">Платеж обработан</div>
+              <div class="notification-item__time">1 час назад</div>
+            </div>
+            <div class="notification-item__content">
+              Ваш платеж на сумму 25 000 ₽ успешно обработан.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-item__header">
+              <div class="notification-item__title">Напоминание о платеже</div>
+              <div class="notification-item__time">3 часа назад</div>
+            </div>
+            <div class="notification-item__content">
+              Приближается срок очередного платежа по договору лизинга
+              №ЛД-2024-001.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-item__header">
+              <div class="notification-item__title">Документы готовы</div>
+              <div class="notification-item__time">5 часов назад</div>
+            </div>
+            <div class="notification-item__content">
+              Документы по вашему заявлению готовы к получению.
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <div class="notification-item__header">
+              <div class="notification-item__title">
+                Техническое обслуживание
+              </div>
+              <div class="notification-item__time">1 день назад</div>
+            </div>
+            <div class="notification-item__content">
+              Запланировано техническое обслуживание системы 25.01.2024 с 02:00
+              до 04:00.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="notifications-modal__footer">
+        <button class="btn btn--secondary" id="mark-all-read">
+          Отметить все как прочитанные
+        </button>
+        <button class="btn btn--outline" id="clear-all-notifications">
+          Очистить все
+        </button>
+      </div>
+    </div>
+
     <!-- Footer включается из компонента -->
     <div id="footer-placeholder"></div>
     <script>
@@ -190,5 +288,6 @@
     </script>
     <script src="../personal_account/personal-account.js"></script>
     <script src="../../components/header/header.js"></script>
+    <script src="../notifications/notifications.js"></script>
   </body>
 </html>

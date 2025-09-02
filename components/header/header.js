@@ -14,7 +14,7 @@ function initializeUserElements() {
   }
 }
 
-// Функция для управления активными элементами навигации
+// Управление активными элементами навигации
 function initializeNavigation() {
   const currentPath = window.location.pathname;
   const navItems = document.querySelectorAll(".header__nav-item");
@@ -43,8 +43,12 @@ function initializeNavigation() {
       faqNav.classList.add("active");
     }
   } else if (currentPath.includes("/pages/personal_account/")) {
-    // Страница профиля - все элементы навигации неактивны (ничего не делаем)
     console.log("На странице профиля - навигация неактивна");
+  } else if (currentPath.includes("/pages/notifications/")) {
+    const notificationNav = document.getElementById("nav-notifications");
+    if (notificationNav) {
+      notificationNav.classList.add("active");
+    }
   }
   // Для остальных страниц можно добавить дополнительную логику
 
@@ -79,12 +83,19 @@ function addNavigationClickHandlers() {
     });
   }
 
-  // Обработчик для "Уведомления" (пока перенаправляем на главную)
+  // Обработчик для "Уведомления"
   const notificationsNav = document.getElementById("nav-notifications");
   if (notificationsNav) {
     notificationsNav.addEventListener("click", () => {
-      // TODO: Добавить переход на страницу уведомлений когда она будет создана
-      console.log("Переход на страницу уведомлений (пока не реализована)");
+      // Открываем модальное окно уведомлений если оно доступно
+      if (
+        window.notificationsModal &&
+        typeof window.notificationsModal.open === "function"
+      ) {
+        window.notificationsModal.open();
+      } else {
+        console.warn("Модальное окно уведомлений не найдено");
+      }
     });
   }
 
