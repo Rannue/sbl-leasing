@@ -82,7 +82,7 @@
 .leasing-table {
   display: grid;
   grid-template-columns: repeat(6, minmax(164px, 1fr)); /* 6 колонок */
-  border: 1px solid #e0e0e0;
+  border: 1px solid #e8e8e8;
   border-radius: 12px;
   overflow: hidden;
   font-family: Inter, sans-serif;
@@ -95,8 +95,8 @@
   align-items: center; /* по вертикали */
   padding: 16px;
   background: #fafafa;
-  border-bottom: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
   color: var(--color-black);
   font-weight: 600;
 }
