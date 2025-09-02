@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -29,6 +29,7 @@
 .authorization__title {
   display: flex;
   gap: 16px;
+  margin-bottom: 48px;
 }
 
 .authorization__image {
@@ -85,9 +86,23 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--color-black);
+  cursor: pointer;
+  padding: 8px;
+  font-size: 14px;
 }
 
 .authorization__technical-support .svg-icon {
   width: 20px;
   height: 20px;
+  fill: var(--color-black);
+}
+
+.authorization__alternative-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: calc(100% - 140px);
 }

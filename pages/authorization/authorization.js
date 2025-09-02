@@ -1,6 +1,94 @@
 const body = document.querySelector("body");
 
-// TECHNICAL_SUPPORT_FORM
+// Маска для ввода номера телефона
+
+const phoneInput = document.querySelector('input[name="phone"]');
+if (phoneInput) {
+  phoneInput.value = "";
+
+  phoneInput.addEventListener("focus", (e) => {
+    if (e.target.value === "") {
+      e.target.value = "+375 ";
+    }
+  });
+
+  phoneInput.addEventListener("input", (e) => {
+    let value = e.target.value;
+
+    // Удаляем все кроме цифр
+    let numbers = value.replace(/\D/g, "");
+
+    // Если пользователь удалил весь текст, возвращаем +375
+    if (numbers.length === 0) {
+      e.target.value = "+375 ";
+      return;
+    }
+
+    // Если начинается не с 375, принудительно добавляем
+    if (!numbers.startsWith("375")) {
+      numbers = "375" + numbers.replace(/^375/, "");
+    }
+
+    // Форматируем номер
+    let formattedValue = "+375";
+    if (numbers.length > 3) {
+      formattedValue += " " + numbers.substring(3, 5);
+    }
+    if (numbers.length > 5) {
+      formattedValue += " " + numbers.substring(5, 8);
+    }
+    if (numbers.length > 8) {
+      formattedValue += " " + numbers.substring(8, 10);
+    }
+    if (numbers.length > 10) {
+      formattedValue += " " + numbers.substring(10, 12);
+    }
+
+    e.target.value = formattedValue;
+  });
+
+  phoneInput.addEventListener("keydown", (e) => {
+    // Запрещаем удаление префикса +375
+    if (
+      (e.key === "Backspace" || e.key === "Delete") &&
+      e.target.selectionStart <= 5 &&
+      e.target.selectionEnd <= 5
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  // Запрещаем установку курсора раньше префикса +375
+  phoneInput.addEventListener("click", (e) => {
+    if (e.target.selectionStart < 5) {
+      e.target.setSelectionRange(5, 5);
+    }
+  });
+
+  phoneInput.addEventListener("keyup", (e) => {
+    if (e.target.selectionStart < 5) {
+      e.target.setSelectionRange(5, 5);
+    }
+  });
+
+  phoneInput.addEventListener("select", (e) => {
+    if (e.target.selectionStart < 5) {
+      e.target.setSelectionRange(5, 5);
+    }
+  });
+}
+
+// FORM SUBMISSION HANDLER
+const authForm = document.querySelector(".authorization__fields");
+if (authForm) {
+  authForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // Переход на главную страницу
+    window.location.href = "../../index.html";
+  });
+}
+
+// TECHNICAL_SUPPORT_FORMт
 
 const openTechnicalSupportFormButton = document.getElementById(
   "technical-support__form-btn"

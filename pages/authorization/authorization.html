@@ -47,24 +47,21 @@
           </div>
           <form
             class="authorization__fields"
-            method="post"
+            method="get"
             action="../../index.html"
           >
             <label class="authorization__input">
               Введите номер телефона
               <input
-                placeholder="+375 00 000 00 00"
+                placeholder="+375 XX XXX XX XX"
                 class="input input--small"
                 type="tel"
                 name="phone"
                 required
                 pattern="^\+375\s\d{2}\s\d{3}\s\d{2}\s\d{2}$"
-                aria-describedby="phone-help"
               />
             </label>
-            <small id="phone-help" class="sr-only"
-              >Формат: +375 XX XXX XX XX</small
-            >
+
             <button
               type="submit"
               class="authorization__btn btn btn--primary btn--small"
@@ -120,6 +117,19 @@
         alt="Фоновое изображение с автомобилем"
       />
     </div>
+
+    <!-- Footer включается из компонента -->
+    <div id="footer-placeholder"></div>
+    <!-- <script>
+      fetch("../../components/footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML =
+            "<footer>" + data + "</footer>";
+        });
+    </script> -->
+
     <script src="authorization.js"></script>
+    <script src="../../components/footer/footer.js"></script>
   </body>
 </html>
