@@ -81,6 +81,21 @@
   align-items: center;
   gap: 8px;
   color: var(--color-gray400);
+  width: calc(100% - 140px);
+}
+
+.authorization__separator hr {
+  flex: 1;
+  height: 1px;
+  border: none;
+  background-color: var(--color-gray300);
+  margin: 0;
+}
+
+.authorization__separator span {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 8px;
 }
 .authorization__technical-support {
   display: flex;

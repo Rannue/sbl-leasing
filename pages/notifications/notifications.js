@@ -193,9 +193,20 @@ class NotificationsModal {
     if (countElement) {
       if (unreadCount > 0) {
         countElement.textContent = unreadCount;
-        countElement.style.display = "block";
+        countElement.style.display = "inline-flex";
       } else {
         countElement.style.display = "none";
+      }
+    }
+
+    // Обновление счетчика в header (если доступно)
+    const headerCountElement = document.getElementById("notifications-count");
+    if (headerCountElement) {
+      if (unreadCount > 0) {
+        headerCountElement.textContent = unreadCount;
+        headerCountElement.style.display = "inline-flex";
+      } else {
+        headerCountElement.style.display = "none";
       }
     }
 

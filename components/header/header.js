@@ -185,16 +185,47 @@ function initializeMobileMenu() {
   });
 }
 
+// Функция для обновления счетчика уведомлений
+function updateNotificationsCount() {
+  const countElement = document.getElementById("notifications-count");
+  if (countElement) {
+    // Пытаемся получить количество из модального окна, если оно доступно
+    if (
+      window.notificationsModal &&
+      typeof window.notificationsModal.updateUnreadCount === "function"
+    ) {
+      window.notificationsModal.updateUnreadCount();
+    } else {
+      // Или считаем непрочитанные уведомления напрямую
+      const unreadNotifications = document.querySelectorAll(
+        ".notification-item--unread"
+      );
+      const count = unreadNotifications.length;
+
+      if (count > 0) {
+        countElement.textContent = count;
+        countElement.style.display = "inline-flex";
+      } else {
+        countElement.style.display = "none";
+      }
+    }
+  }
+}
+
 // Инициализация когда DOM готов
 function initializeHeader() {
   initializeUserElements();
   initializeNavigation();
   initializeProfileNavigation();
   initializeMobileMenu();
+
+  // Обновляем счетчик уведомлений с небольшой задержкой
+  setTimeout(updateNotificationsCount, 100);
 }
 
-// Делаем функцию доступной глобально
+// Делаем функции доступными глобально
 window.initializeHeader = initializeHeader;
+window.updateNotificationsCount = updateNotificationsCount;
 
 // Если DOM уже загружен, инициализируем сразу
 if (document.readyState === "loading") {
