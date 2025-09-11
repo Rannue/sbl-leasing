@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мой сайт</title>
     <link rel="stylesheet" href="../../../../style.css" />
+    <link rel="stylesheet" href="technical-support.css" />
   </head>
   <body>
     <div id="technical-support__form" class="modal">
@@ -48,13 +49,28 @@
             <select
               class="select select--small"
               name="feedback-format"
+              id="feedback-format"
               required
             >
-              <option value="designer">item1</option>
-              <option value="developer">item2</option>
-              <option value="manager">item3</option>
+              <option value="">Выберите формат связи</option>
+              <option value="phone">Мобильный телефон</option>
+              <option value="email">Электронная почта</option>
             </select></label
           >
+
+          <!-- Динамический инпут для контактной информации -->
+          <div id="contact-input-container" style="display: none">
+            <label class="technical-support__label" for="contact-info">
+              <span id="contact-label">Контактная информация*</span>
+              <input
+                class="input input--small"
+                type="text"
+                id="contact-info"
+                name="contact_info"
+                placeholder=""
+              />
+            </label>
+          </div>
 
           <label for="message">
             Сообщение о проблеме
@@ -75,5 +91,6 @@
         </div>
       </form>
     </div>
+    <script src="technical-support.js"></script>
   </body>
 </html>

@@ -1,0 +1,84 @@
+/* Стили для модального окна технической поддержки */
+
+.technical-support__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-black);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+#contact-input-container {
+  transition: all 0.3s ease;
+}
+
+#contact-input-container.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Стили для инпута телефона */
+#contact-info[type="tel"] {
+  font-family: "Inter", monospace;
+  letter-spacing: 0.5px;
+}
+
+/* Стили для инпута email */
+#contact-info[type="email"] {
+  font-family: "Inter", sans-serif;
+}
+
+/* Улучшенные стили для select */
+.technical-support__label select {
+  cursor: pointer;
+}
+
+.technical-support__label select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Стили для обязательных полей */
+.technical-support__label span::after {
+  content: "";
+}
+
+/* Стили для placeholder */
+#contact-info::placeholder {
+  color: var(--color-gray400);
+  font-style: italic;
+}
+
+/* Стили для валидации */
+#contact-info:invalid {
+  border-color: #e74c3c;
+}
+
+#contact-info:valid {
+  border-color: var(--color-primary);
+}
+
+/* Responsive стили */
+@media (max-width: 600px) {
+  .technical-support__label {
+    font-size: 12px;
+  }
+
+  #contact-info {
+    font-size: 14px;
+  }
+}
+
